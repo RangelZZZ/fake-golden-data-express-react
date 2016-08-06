@@ -4,6 +4,10 @@ const path = require('path');
 
 app.use(express.static(__dirname + '/public'));
 
+app.get('/api/forms/1', (req, res) => {
+    res.json(['text', 'date']);
+});
+
 app.listen(3000, () => {
     console.log('Server started.');
 });
